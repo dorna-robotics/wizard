@@ -24,7 +24,7 @@ def kill_process_and_children(pid):
 
 def start_event(msg, union, robot):
 	# check the start condition
-	if robot.prm_config.emergency_key not None and robot.prm_config.emergency_value is not None and robot.prm_config.emergency_key in msg and msg[robot.prm_config.emergency_key] != robot.prm_config.emergency_value:
+	if robot.prm_config.emergency_key is not None and robot.prm_config.emergency_value is not None and robot.prm_config.emergency_key in msg and msg[robot.prm_config.emergency_key] != robot.prm_config.emergency_value:
 
 		# check the queue
 		try:
